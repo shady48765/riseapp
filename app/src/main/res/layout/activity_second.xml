@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".second"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:background="#27363b">
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="246dp"
+        android:layout_marginBottom="711dp"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="222dp"
+        android:layout_height="226dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/edit_text_style"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter Tasks Performed"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A0A9AE"
+        app:layout_constraintBottom_toTopOf="@+id/ebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="151dp"
+        android:background="#EB4960"
+        android:longClickable="true"
+        android:stateListAnimator="@android:anim/fade_in"
+        android:text="Enter"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

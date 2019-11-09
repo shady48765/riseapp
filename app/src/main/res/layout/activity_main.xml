@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:background="#27363b">
+
+
+    <EditText
+        android:id="@+id/uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/ic_action_user"
+        android:ems="10"
+        android:hint=" Enter Name "
+        android:inputType="textPersonName"
+        android:shadowColor="#E86A18"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#E86A18"
+        android:textColorHint="#A0A9AE"
+        android:textColorLink="#283F43"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="57dp"
+        android:drawableLeft="@drawable/ic_action_lock"
+        android:ems="10"
+        android:hint=" Enter Password"
+        android:inputType="textPassword"
+        android:paddingTop="0sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A0A9AE"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uname" />
+
+    <Button
+        android:id="@+id/lbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="204dp"
+        android:background="#EB4960"
+        android:longClickable="true"
+        android:onClick="login"
+        android:stateListAnimator="@android:anim/fade_in"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwd" />
+
+    <TextView
+        android:id="@+id/rise"
+        android:layout_width="169dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="222dp"
+        android:layout_marginBottom="87dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text="R.I.S.E."
+        android:textColor="#FFFFFF"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/uname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/riselogo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
