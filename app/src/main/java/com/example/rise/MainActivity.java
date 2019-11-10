@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.pwd);
         String pwd = password.getText().toString().trim().toLowerCase();
 
-        if ((user.equals("harsh") && pwd.equals("rise"))||(user.equals("swarmin") && pwd.equals("rise"))||(user.equals("vrinda") && pwd.equals("rise"))||(user.equals("anchal") && pwd.equals("rise"))){
+        if ((user.equals("harsh") && pwd.equals("rise"))||(user.equals("swarnim") && pwd.equals("rise"))||(user.equals("vrinda") && pwd.equals("rise"))||(user.equals("anchal") && pwd.equals("rise"))){
             Toast.makeText(getApplicationContext(),"login successful",Toast.LENGTH_LONG).show();
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(75);

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,24 +27,24 @@ public class second extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Bundle bundle = getIntent().getExtras();
-        Button tosubmit;
-        tosubmit = findViewById(R.id.ebutton);
-        data1 = findViewById(R.id.data);
-        uname = bundle.getString("uname");
-        TextView user ;
-        user = findViewById(R.id.user);
 
-        switch (uname){
+        uname = bundle.getString("uname");
+
+        TextView user;
+
+        user = findViewById(R.id.user);
+        data1 = findViewById(R.id.data);
+        switch (uname) {
             case "harsh":
                 user.setText(user.getText().toString().concat("Hello, Harsh"));
                 break;
             case "anchal":
                 user.setText(user.getText().toString().concat("Hello, Anchal"));
                 break;
-            case "swarmin":
+            case "swarnim":
                 user.setText(user.getText().toString().concat("Hello, Swarmin"));
                 break;
             case "vrinda":
@@ -56,7 +55,7 @@ public class second extends AppCompatActivity {
 
     }
 
-    public void submit (View view) throws InterruptedException {
+    public void submit(View view) throws InterruptedException {
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
@@ -65,26 +64,22 @@ public class second extends AppCompatActivity {
 
         data = data1.getText().toString();
 
-        if(data.equals(""))
-        {
-            Toast.makeText(getApplicationContext(),"Enter Valid Input",Toast.LENGTH_LONG).show();
+        if (data.equals("")) {
+            Toast.makeText(getApplicationContext(), "Enter Valid Input", Toast.LENGTH_LONG).show();
             v.vibrate(70);
             TimeUnit.MILLISECONDS.sleep(250);
             v.vibrate(70);
         }
         else
-        {
+            {
             v.vibrate(75);
+            DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy :hh:mm:ss");
             Date date = new Date();
-            myRef.child(uname).child(date.toString()).setValue(data);
+            String newdate = dateFormat.format(date).toString();
+            myRef.child(uname).child(newdate).setValue(data);
             data1.setText("");
-            Toast.makeText(getApplicationContext(),"Response Submitted",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Response Submitted", Toast.LENGTH_LONG).show();
             data1.setHint("Add new Task");
         }
-
-
-
-
     }
-
 }

@@ -4,16 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin">
+    tools:context=".admin"
+    android:background="#1C282A">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/admintext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello Admin !"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:text="Hello, Admin !"
+        android:textColor="#A0A9AE"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/sname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="1dp"
+        android:drawableLeft="@drawable/ic_action_user"
+        android:ems="10"
+        android:hint="Enter Student Name"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A0A9AE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admintext" />
+
+    <Button
+        android:id="@+id/studenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="215dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="150dp"
+        android:background="#EB4960"
+        android:longClickable="true"
+        android:onClick="sdet"
+        android:stateListAnimator="@android:anim/fade_in"
+        android:text="Enter"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sname" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
