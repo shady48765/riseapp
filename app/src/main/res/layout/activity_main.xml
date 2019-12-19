@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="99dp"
         android:drawableLeft="@drawable/ic_action_user"
         android:ems="10"
@@ -25,11 +25,11 @@
         android:textColorHighlight="#E86A18"
         android:textColorHint="#A0A9AE"
         android:textColorLink="#283F43"
-        android:textSize="20sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/rise" />
 
     <EditText
         android:id="@+id/pwd"
@@ -42,10 +42,10 @@
         android:ems="10"
         android:hint=" Enter Password"
         android:inputType="textPassword"
-        android:paddingTop="0sp"
+        android:paddingTop="0dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#A0A9AE"
-        android:textSize="20sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/uname" />
@@ -56,37 +56,31 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:layout_marginBottom="150dp"
-        android:background="#EB4960"
+        android:background="#28b78d"
         android:longClickable="true"
         android:onClick="login"
         android:stateListAnimator="@android:anim/fade_in"
         android:text="Login"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pwd" />
 
-    <TextView
+
+    <ImageView
         android:id="@+id/rise"
-        android:layout_width="169dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="222dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:gravity="center"
-        android:text="R.I.S.E."
-        android:textColor="#FFFFFF"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_width="159dp"
+        android:layout_height="166dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:background="#27363b"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/riselogo" />
+        app:srcCompat="@drawable/risewhite" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

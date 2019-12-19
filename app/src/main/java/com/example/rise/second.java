@@ -41,8 +41,8 @@ public class second extends AppCompatActivity {
             case "harsh":
                 user.setText(user.getText().toString().concat("Hello, Harsh"));
                 break;
-            case "anchal":
-                user.setText(user.getText().toString().concat("Hello, Anchal"));
+            case "achal":
+                user.setText(user.getText().toString().concat("Hello, Achal"));
                 break;
             case "swarnim":
                 user.setText(user.getText().toString().concat("Hello, Swarmin"));

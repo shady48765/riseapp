@@ -13,9 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="150dp"
         android:textColor="#FFFFFF"
-        android:textSize="36sp"
+        android:textSize="36dp"
         app:layout_constraintBottom_toTopOf="@+id/data"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -53,9 +53,8 @@
         android:stateListAnimator="@android:anim/fade_in"
         android:text="Enter"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

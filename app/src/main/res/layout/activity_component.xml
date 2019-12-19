@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#27363b"
+    tools:context=".component">
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="413dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Select component"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:popupBackground="#27363b"
+        android:id="@+id/spinner01"
+        android:layout_width="336dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="255dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:background="#28b78d"
+        android:onClick="Se1"
+        android:text="submit"
+        android:textColor="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner01" />
+
+
+    <Spinner
+        android:popupBackground="#27363b"
+        android:id="@+id/spinner2"
+        android:layout_width="336dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <Button
+        android:background="#28b78d"
+        android:id="@+id/button2"
+        android:layout_width="255dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:onClick="Se2"
+        android:text="submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2"
+        tools:ignore="MissingConstraints"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:background="#28b78d"
+        android:id="@+id/button3"
+        android:layout_width="255dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:onClick="enter"
+        android:text="Enter"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+
+    <Spinner
+        android:popupBackground="#27363b"
+        android:id="@+id/spinner3"
+        android:layout_width="336dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,7 @@ public class admin extends AppCompatActivity {
         sname.getText().toString().trim().toLowerCase();
     }
     public void sdet(View view) {
-        if (sname.getText().toString().trim().toLowerCase().equals("harsh") || sname.getText().toString().trim().toLowerCase().equals("swarnim") || sname.getText().toString().trim().toLowerCase().equals("anchal") || sname.getText().toString().trim().toLowerCase().equals("vrinda")) {
+        if (sname.getText().toString().trim().toLowerCase().equals("harsh") || sname.getText().toString().trim().toLowerCase().equals("swarnim") || sname.getText().toString().trim().toLowerCase().equals("achal") || sname.getText().toString().trim().toLowerCase().equals("vrinda")) {
             bundle.putString("sname", sname.getText().toString().trim().toLowerCase());
             final Intent i = new Intent(admin.this, studentdata.class);
             i.putExtras(bundle);

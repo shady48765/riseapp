@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
 
         Button browser = findViewById(R.id.lbutton);
 
-        TextView rise = findViewById(R.id.rise);
+        ImageView rise = findViewById(R.id.rise);
         rise.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(getApplicationContext(), "opening browser", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Opening Browser", Toast.LENGTH_LONG).show();
                 Intent i = new Intent(getApplicationContext(), browser.class);
                 startActivity(i);
                 return false;
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.pwd);
         String pwd = password.getText().toString().trim().toLowerCase();
 
-        if ((user.equals("harsh") && pwd.equals("rise"))||(user.equals("swarnim") && pwd.equals("rise"))||(user.equals("vrinda") && pwd.equals("rise"))||(user.equals("anchal") && pwd.equals("rise"))){
+        if ((user.equals("harsh") && pwd.equals("rise"))||(user.equals("swarnim") && pwd.equals("swarnim@123"))||(user.equals("vrinda") && pwd.equals("rise"))||(user.equals("achal") && pwd.equals("achalsingh"))||(user.equals("rupali") && pwd.equals("rupali@123"))){
             Toast.makeText(getApplicationContext(),"login successful",Toast.LENGTH_LONG).show();
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(75);
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             },0);
         }
-        else if ((user.equals("krypton") && pwd.equals("nimda"))||(user.equals("ajinkya") && pwd.equals("nimda"))||(user.equals("vaibhav") && pwd.equals("nimda"))||(user.equals("usama") && pwd.equals("nimda"))||(user.equals("gayatri") && pwd.equals("nimda"))||(user.equals("nikhil") && pwd.equals("nimda"))||(user.equals("aman") && pwd.equals("nimda"))){
+        else if ((user.equals("krypton") && pwd.equals("nimda"))||(user.equals("ajinkya") && pwd.equals("nimda"))||(user.equals("vaibhav") && pwd.equals("nimda"))||(user.equals("usama") && pwd.equals("nimda"))||(user.equals("gayatri") && pwd.equals("nimda"))||(user.equals("nikhil") && pwd.equals("nimda"))||(user.equals("shady") && pwd.equals("nimda"))){
             Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_LONG).show();
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             v.vibrate(75);

@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".studentdata"></activity>
+        <activity android:name=".component"></activity>
+        <activity android:name=".select" />
+        <activity android:name=".studentdata" />
         <activity android:name=".admin" />
         <activity android:name=".splash">
             <meta-data
