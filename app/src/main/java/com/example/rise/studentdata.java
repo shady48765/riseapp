@@ -3,27 +3,28 @@ package com.example.rise;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Objects;
+import java.util.ArrayList;
 
 
 public class studentdata extends AppCompatActivity {
 
 
 
-    String sname , date;
+    String sname , date , str;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,22 +37,22 @@ public class studentdata extends AppCompatActivity {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
 
+
         date = myRef.child(sname).getKey();
 
                 switch (sname){
                     case "harsh":
-                       // Toast.makeText(getApplicationContext(), date, Toast.LENGTH_LONG).show();
-                        String link = myRef.child(sname).getDatabase().toString();
-                        Bundle bundle1 = new Bundle();
-                        bundle1.putString("link",link);
-                        final Intent i = new Intent(studentdata.this,browser.class);
-                        i.putExtras(bundle1);
-                        new Handler().postDelayed(new Runnable() {
+                        myRef.addValueEventListener(new ValueEventListener() {
                             @Override
-                            public void run() {
-                                startActivity(i);
+                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                showdata(dataSnapshot);
                             }
-                        },0);
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
                         break;
                     case "achal":
                         Toast.makeText(getApplicationContext(), sname, Toast.LENGTH_LONG).show();
@@ -63,5 +64,17 @@ public class studentdata extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), sname, Toast.LENGTH_LONG).show();
                         break;
                 }
+    }
+
+
+    private void showdata(DataSnapshot dataSnapshot) {
+        TextView textView = findViewById(R.id.textview);
+        for(DataSnapshot ds : dataSnapshot.getChildren()){
+            studentinfo obj = new studentinfo();
+                    obj.setinfo(ds.child(sname).getValue(studentinfo.class).getinfo());
+                    str = ds.child(sname).child("12-11-2019 :12:36:12:").getValue(studentinfo.class).getinfo();
+                    textView.setText(str);
+
+        }
     }
 }

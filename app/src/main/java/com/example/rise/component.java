@@ -132,7 +132,7 @@ public class component extends AppCompatActivity {
 //            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.EMPTY);
 //            PendingIntent pendingIntent = PendingIntent.getActivity(this,0,intent,0);
 //            builder.setContentIntent(pendingIntent);
-//
+
 
             NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
             notificationManager.notify(1,builder.build());
